@@ -6,221 +6,101 @@
 <title>라리리듬체조 | 우아한 몸짓의 시작</title>
 <style>
   :root{
-    --cream:#FFF9F2;
-    --cream-soft:#FBF1E6;
-    --blush:#F6DCD6;
-    --gold:#C79A56;
-    --gold-deep:#9C7A3E;
-    --ink:#3B322C;
-    --ink-soft:#7A6E64;
-    --white:#FFFFFF;
-    --border:#EFE2D3;
+    --cream:#FFF9F2; --cream-soft:#FBF1E6; --blush:#F6DCD6;
+    --gold:#C79A56; --gold-deep:#9C7A3E; --ink:#3B322C; --ink-soft:#7A6E64;
+    --white:#FFFFFF; --border:#EFE2D3;
   }
   *{box-sizing:border-box;margin:0;padding:0;}
   html{scroll-behavior:smooth;}
-  body{
-    font-family:'Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',sans-serif;
-    color:var(--ink);
-    background:var(--cream);
-    line-height:1.6;
-    -webkit-font-smoothing:antialiased;
-  }
+  body{font-family:'Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased;}
   img{max-width:100%;display:block;}
   a{text-decoration:none;color:inherit;}
   .wrap{max-width:1120px;margin:0 auto;padding:0 32px;}
   section{padding:96px 0;}
 
-  /* Header */
-  header{
-    position:fixed;top:0;left:0;right:0;z-index:100;
-    background:rgba(255,249,242,0.9);
-    backdrop-filter:blur(8px);
-    border-bottom:1px solid var(--border);
-  }
-  header .wrap{
-    display:flex;align-items:center;justify-content:space-between;
-    height:76px;padding-top:0;padding-bottom:0;
-  }
-  .logo{
-    font-size:22px;font-weight:700;letter-spacing:1px;color:var(--gold-deep);
-  }
+  header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,249,242,0.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;height:76px;}
+  .logo{font-size:22px;font-weight:700;letter-spacing:1px;color:var(--gold-deep);}
   nav ul{display:flex;gap:36px;list-style:none;}
   nav a{font-size:15px;color:var(--ink);font-weight:500;}
-  nav a:hover{color:var(--gold-deep);}
-  .nav-cta{
-    background:var(--gold);color:var(--white)!important;padding:10px 22px;border-radius:24px;
-    font-size:14px;font-weight:700;
-  }
+  nav a:hover, nav a.active{color:var(--gold-deep);}
+  .nav-cta{background:var(--gold);color:var(--white)!important;padding:10px 22px;border-radius:24px;font-size:14px;font-weight:700;}
   .nav-cta:hover{background:var(--gold-deep);}
 
-  /* Hero */
-  .hero{
-    position:relative;height:100vh;min-height:640px;
-    display:flex;align-items:center;
-    overflow:hidden;
-  }
-  .hero img{
-    position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 25%;
-  }
-  .hero::after{
-    content:'';position:absolute;inset:0;
-    background:linear-gradient(90deg, rgba(59,50,44,0.55) 0%, rgba(59,50,44,0.18) 55%, rgba(59,50,44,0.05) 100%);
-  }
-  .hero-content{
-    position:relative;z-index:2;color:var(--white);max-width:560px;
-    padding-left:32px;
-  }
-  .hero-eyebrow{
-    display:inline-block;font-size:13px;letter-spacing:3px;font-weight:700;
-    color:#FFE9C7;margin-bottom:20px;text-transform:uppercase;
-  }
-  .hero h1{
-    font-size:48px;font-weight:700;line-height:1.35;margin-bottom:20px;
-    text-shadow:0 2px 18px rgba(0,0,0,0.25);
-  }
-  .hero p{
-    font-size:17px;color:#F6EEE2;margin-bottom:32px;max-width:460px;
-  }
-  .btn-row{display:flex;gap:14px;}
-  .btn-primary{
-    background:var(--gold);color:var(--white);padding:15px 30px;border-radius:28px;
-    font-weight:700;font-size:15px;box-shadow:0 8px 24px rgba(199,154,86,0.35);
-  }
+  .hero{position:relative;height:100vh;min-height:640px;display:flex;align-items:center;overflow:hidden;}
+  .hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 25%;}
+  .hero::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg, rgba(59,50,44,0.55) 0%, rgba(59,50,44,0.18) 55%, rgba(59,50,44,0.05) 100%);}
+  .hero-content{position:relative;z-index:2;color:var(--white);max-width:560px;padding-left:32px;}
+  .hero-eyebrow{display:inline-block;font-size:13px;letter-spacing:3px;font-weight:700;color:#FFE9C7;margin-bottom:20px;text-transform:uppercase;}
+  .hero h1{font-size:48px;font-weight:700;line-height:1.35;margin-bottom:20px;text-shadow:0 2px 18px rgba(0,0,0,0.25);}
+  .hero p{font-size:17px;color:#F6EEE2;margin-bottom:32px;max-width:460px;}
+  .btn-row{display:flex;gap:14px;flex-wrap:wrap;}
+  .btn-primary{background:var(--gold);color:var(--white);padding:15px 30px;border-radius:28px;font-weight:700;font-size:15px;box-shadow:0 8px 24px rgba(199,154,86,0.35);display:inline-block;}
   .btn-primary:hover{background:var(--gold-deep);}
-  .btn-outline{
-    border:1.5px solid rgba(255,255,255,0.7);color:var(--white);padding:15px 30px;border-radius:28px;
-    font-weight:700;font-size:15px;
-  }
+  .btn-outline{border:1.5px solid rgba(255,255,255,0.7);color:var(--white);padding:15px 30px;border-radius:28px;font-weight:700;font-size:15px;display:inline-block;}
   .btn-outline:hover{background:rgba(255,255,255,0.15);}
 
-  /* Section heading */
-  .eyebrow{
-    font-size:13px;letter-spacing:3px;font-weight:700;color:var(--gold-deep);
-    text-transform:uppercase;margin-bottom:14px;
-  }
-  .section-title{
-    font-size:32px;font-weight:700;margin-bottom:18px;color:var(--ink);
-  }
-  .section-desc{
-    font-size:15.5px;color:var(--ink-soft);max-width:560px;
-  }
+  .eyebrow{font-size:13px;letter-spacing:3px;font-weight:700;color:var(--gold-deep);text-transform:uppercase;margin-bottom:14px;}
+  .section-title{font-size:32px;font-weight:700;margin-bottom:18px;color:var(--ink);}
+  .section-desc{font-size:15.5px;color:var(--ink-soft);max-width:560px;}
   .center{text-align:center;margin-left:auto;margin-right:auto;}
 
-  /* About */
-  .about{
-    display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;
-  }
-  .about-media{
-    position:relative;border-radius:16px;overflow:hidden;
-    box-shadow:0 20px 50px rgba(156,122,62,0.18);
-  }
+  .about{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
+  .about-media{position:relative;border-radius:16px;overflow:hidden;box-shadow:0 20px 50px rgba(156,122,62,0.18);}
   .about-media img{border-radius:16px;}
-  .about-stats{
-    display:flex;gap:28px;margin-top:32px;
-  }
+  .about-stats{display:flex;gap:28px;margin-top:32px;flex-wrap:wrap;}
   .stat b{display:block;font-size:26px;color:var(--gold-deep);font-weight:700;}
   .stat span{font-size:13px;color:var(--ink-soft);}
 
-  /* Features */
   .features{background:var(--cream-soft);}
-  .feature-grid{
-    display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:56px;
-  }
-  .feature-card{
-    background:var(--white);border:1px solid var(--border);border-radius:16px;
-    padding:36px 28px;text-align:left;
-  }
-  .feature-icon{
-    width:52px;height:52px;border-radius:14px;background:var(--blush);
-    display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:20px;
-  }
+  .feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:56px;}
+  .feature-card{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:36px 28px;text-align:left;}
+  .feature-icon{width:52px;height:52px;border-radius:14px;background:var(--blush);display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:20px;}
   .feature-card h3{font-size:18px;margin-bottom:10px;}
   .feature-card p{font-size:14.5px;color:var(--ink-soft);}
 
-  /* Branches */
-  .branch-grid{
-    display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:56px;
-  }
-  .branch-card{
-    background:var(--white);border-radius:16px;overflow:hidden;
-    border:1px solid var(--border);
-    box-shadow:0 12px 32px rgba(156,122,62,0.08);
-  }
+  .branch-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;margin-top:56px;}
+  .branch-card{background:var(--white);border-radius:16px;overflow:hidden;border:1px solid var(--border);box-shadow:0 12px 32px rgba(156,122,62,0.08);}
   .branch-card img{height:200px;width:100%;object-fit:cover;}
   .branch-body{padding:26px 24px;}
-  .branch-tag{
-    display:inline-block;font-size:12px;font-weight:700;color:var(--gold-deep);
-    background:var(--blush);padding:4px 12px;border-radius:20px;margin-bottom:12px;
-  }
+  .branch-tag{display:inline-block;font-size:12px;font-weight:700;color:var(--gold-deep);background:var(--blush);padding:4px 12px;border-radius:20px;margin-bottom:12px;}
   .branch-body h3{font-size:19px;margin-bottom:10px;}
   .branch-info{font-size:13.5px;color:var(--ink-soft);margin-bottom:6px;display:flex;gap:8px;}
-  .branch-info b{color:var(--ink);font-weight:600;min-width:44px;}
+  .branch-info b{color:var(--ink);font-weight:600;min-width:44px;flex:none;}
+  .branch-actions{display:flex;gap:10px;margin-top:16px;}
+  .btn-mini{flex:1;text-align:center;padding:10px 12px;border-radius:10px;font-size:13.5px;font-weight:700;}
+  .btn-mini.call{background:var(--gold);color:var(--white);}
+  .btn-mini.call:hover{background:var(--gold-deep);}
+  .btn-mini.ig{background:var(--cream-soft);color:var(--gold-deep);border:1px solid var(--border);}
+  .btn-mini.ig:hover{background:var(--blush);}
 
-  /* Gallery */
   .gallery{background:var(--cream-soft);}
-  .gallery-grid{
-    display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:56px;
-  }
-  .gallery-grid img{
-    height:220px;object-fit:cover;border-radius:12px;
-  }
+  .gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:56px;}
+  .gallery-grid img{height:220px;object-fit:cover;border-radius:12px;}
   .gallery-grid div:nth-child(1){grid-column:span 2;grid-row:span 2;}
   .gallery-grid div:nth-child(1) img{height:456px;}
 
-  /* CTA */
-  .cta{
-    background:linear-gradient(120deg,#8A6A38,#C79A56);
-    border-radius:24px;padding:64px 56px;color:var(--white);
-    display:flex;justify-content:space-between;align-items:center;gap:32px;
-    flex-wrap:wrap;
-  }
-  .cta h2{font-size:28px;margin-bottom:10px;font-weight:700;}
-  .cta p{color:#FCEFDA;font-size:15px;}
-  .cta .btn-primary{background:var(--white);color:var(--gold-deep);box-shadow:none;}
-  .cta .btn-primary:hover{background:#FCEFDA;}
+  .page-hero{padding:168px 0 64px;background:linear-gradient(180deg,var(--cream-soft),var(--cream));text-align:center;}
 
-  /* Contact */
-  .contact-grid{
-    display:grid;grid-template-columns:1fr 1fr;gap:64px;margin-top:48px;
-  }
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;margin-top:48px;}
   .contact-list{list-style:none;display:flex;flex-direction:column;gap:20px;}
   .contact-list li{display:flex;gap:16px;align-items:flex-start;font-size:14.5px;color:var(--ink-soft);}
   .contact-list b{color:var(--ink);display:block;font-size:15px;margin-bottom:2px;}
-  .icon-dot{
-    width:38px;height:38px;border-radius:50%;background:var(--blush);flex:none;
-    display:flex;align-items:center;justify-content:center;font-size:16px;
-  }
-  .form{
-    background:var(--white);border:1px solid var(--border);border-radius:16px;padding:32px;
-  }
+  .contact-list a{color:var(--gold-deep);font-weight:600;}
+  .icon-dot{width:38px;height:38px;border-radius:50%;background:var(--blush);flex:none;display:flex;align-items:center;justify-content:center;font-size:16px;}
+  .form{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:32px;}
   .form label{font-size:13px;font-weight:700;color:var(--ink);display:block;margin-bottom:6px;}
-  .form input, .form select, .form textarea{
-    width:100%;padding:12px 14px;border:1px solid var(--border);border-radius:10px;
-    font-size:14px;margin-bottom:16px;font-family:inherit;background:var(--cream);
-  }
+  .form input, .form select, .form textarea{width:100%;padding:12px 14px;border:1px solid var(--border);border-radius:10px;font-size:14px;margin-bottom:16px;font-family:inherit;background:var(--cream);}
   .form textarea{resize:vertical;min-height:80px;}
-  .form button{
-    width:100%;background:var(--gold);color:var(--white);border:none;padding:14px;border-radius:10px;
-    font-weight:700;font-size:15px;cursor:pointer;
-  }
+  .form button{width:100%;background:var(--gold);color:var(--white);border:none;padding:14px;border-radius:10px;font-weight:700;font-size:15px;cursor:pointer;}
   .form button:hover{background:var(--gold-deep);}
 
-  footer{
-    background:#2E2620;color:#D9CDBE;padding:48px 0 28px;
-  }
-  .footer-top{
-    display:flex;justify-content:space-between;flex-wrap:wrap;gap:24px;margin-bottom:32px;
-  }
+  footer{background:#2E2620;color:#D9CDBE;padding:48px 0 28px;}
+  .footer-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:24px;margin-bottom:32px;}
   .footer-top .logo{color:var(--white);}
   .footer-sns{display:flex;gap:14px;}
-  .footer-sns a{
-    width:38px;height:38px;border-radius:50%;border:1px solid rgba(255,255,255,0.2);
-    display:flex;align-items:center;justify-content:center;font-size:14px;
-  }
-  .footer-bottom{
-    border-top:1px solid rgba(255,255,255,0.12);padding-top:20px;
-    font-size:12.5px;color:#9A8E80;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;
-  }
+  .footer-sns a{width:38px;height:38px;border-radius:50%;border:1px solid rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;font-size:14px;}
+  .footer-bottom{border-top:1px solid rgba(255,255,255,0.12);padding-top:20px;font-size:12.5px;color:#9A8E80;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;}
 
   @media(max-width:860px){
     nav{display:none;}
@@ -230,8 +110,8 @@
     .gallery-grid{grid-template-columns:repeat(2,1fr);}
     .gallery-grid div:nth-child(1){grid-column:span 2;grid-row:span 1;}
     .gallery-grid div:nth-child(1) img{height:220px;}
-    .cta{padding:40px 28px;}
     section{padding:64px 0;}
+    .page-hero{padding:140px 0 48px;}
   }
 </style>
 </head>
@@ -242,14 +122,14 @@
     <div class="logo">라리리듬체조</div>
     <nav>
       <ul>
-        <li><a href="#about">학원소개</a></li>
-        <li><a href="#program">프로그램</a></li>
-        <li><a href="#branch">지점안내</a></li>
-        <li><a href="#gallery">갤러리</a></li>
-        <li><a href="#contact">문의</a></li>
+        <li><a href="about.html">학원소개</a></li>
+        <li><a href="program.html">프로그램</a></li>
+        <li><a href="branch.html">지점안내</a></li>
+        <li><a href="gallery.html">갤러리</a></li>
+        <li><a href="contact.html">문의</a></li>
       </ul>
     </nav>
-    <a href="#contact" class="nav-cta">상담 신청</a>
+    <a href="contact.html" class="nav-cta">상담 신청</a>
   </div>
 </header>
 
@@ -259,10 +139,10 @@
     <div class="hero-content">
       <span class="hero-eyebrow">RALIE RHYTHMIC GYMNASTICS</span>
       <h1>우아함은,<br>배울 수 있습니다.</h1>
-      <p>라리리듬체조는 아이의 자세, 유연성, 예술성을 함께 키우는 프리미엄 리듬체조 학원입니다. 전국 3개 지점에서 만나보세요.</p>
+      <p>국가대표 및 국가대표 상비군 출신 전문 강사진이 6세 취미반부터 전문 선수 교육까지, 아이들의 눈높이에 맞춘 체계적인 수업을 진행합니다.</p>
       <div class="btn-row">
-        <a href="#contact" class="btn-primary">무료 상담 신청</a>
-        <a href="#branch" class="btn-outline">지점 둘러보기</a>
+        <a href="contact.html" class="btn-primary">상담 신청</a>
+        <a href="branch.html" class="btn-outline">지점 둘러보기</a>
       </div>
     </div>
   </div>
@@ -276,146 +156,41 @@
     <div>
       <div class="eyebrow">ABOUT RALIE</div>
       <h2 class="section-title">아이의 몸짓 하나하나에<br>품격을 더합니다</h2>
-      <p class="section-desc">라리리듬체조는 단순한 체육 수업이 아닌, 자세 교정과 예술 표현력을 함께 기르는 커리큘럼을 운영합니다. 국가대표 출신 강사진이 아이의 성장 단계에 맞춘 1:1 맞춤 지도로 자신감과 우아한 신체 언어를 완성합니다.</p>
+      <p class="section-desc">국가대표 및 국가대표 상비군 출신 전문 강사진이 6세 취미반부터 전문 선수 교육까지, 아이들의 눈높이에 맞춘 체계적인 수업을 진행합니다. 자세 교정과 예술 표현력을 함께 기르는 커리큘럼으로 자신감과 우아한 신체 언어를 완성합니다.</p>
       <div class="about-stats">
-        <div class="stat"><b>3</b><span>전국 지점</span></div>
+        <div class="stat"><b>4</b><span>지점 · 선수반</span></div>
         <div class="stat"><b>12</b><span>전문 강사진</span></div>
         <div class="stat"><b>15년+</b><span>지도 경력</span></div>
         <div class="stat"><b>98%</b><span>학부모 만족도</span></div>
       </div>
-    </div>
-  </div>
-</section>
-
-<section id="program" class="features">
-  <div class="wrap">
-    <div class="eyebrow center">PROGRAM</div>
-    <h2 class="section-title center">라리만의 세 가지 약속</h2>
-    <p class="section-desc center">연령과 목표에 맞춘 체계적인 커리큘럼으로 취미반부터 선수반까지 함께합니다.</p>
-    <div class="feature-grid">
-      <div class="feature-card">
-        <div class="feature-icon">🎓</div>
-        <h3>전문 강사진</h3>
-        <p>국가대표 및 지도자 자격을 갖춘 강사진이 안전하고 세심하게 지도합니다.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">🎯</div>
-        <h3>맞춤형 커리큘럼</h3>
-        <p>유연성 · 리듬감 · 표현력 단계별 프로그램으로 아이 수준에 맞춰 진행합니다.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">🏆</div>
-        <h3>대회 준비반</h3>
-        <p>전국 대회 및 콩쿠르 준비를 위한 집중 트레이닝 반을 별도로 운영합니다.</p>
+      <div class="btn-row" style="margin-top:28px;">
+        <a href="about.html" class="btn-primary" style="background:var(--gold-deep);">학원소개 자세히 보기</a>
       </div>
     </div>
   </div>
 </section>
 
-<section id="branch">
+<section id="branch" class="features">
   <div class="wrap">
     <div class="eyebrow center">BRANCH</div>
-    <h2 class="section-title center">전국 3개 지점 안내</h2>
+    <h2 class="section-title center">수지 · 광교 · 신현 · 선수반</h2>
     <p class="section-desc center">가까운 지점을 방문해 아이에게 맞는 클래스를 상담받아 보세요.</p>
-    <div class="branch-grid">
-      <div class="branch-card">
-        <img src="images/studio.jpg" alt="강남점 스튜디오">
-        <div class="branch-body">
-          <span class="branch-tag">FLAGSHIP</span>
-          <h3>강남점</h3>
-          <div class="branch-info"><b>주소</b><span>서울 강남구 테헤란로 000</span></div>
-          <div class="branch-info"><b>전화</b><span>02-000-0000</span></div>
-          <div class="branch-info"><b>운영</b><span>평일 10:00–20:00 / 토 10:00–14:00</span></div>
-        </div>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <h3>수지점 (본점)</h3>
+        <p>031-262-8882</p>
       </div>
-      <div class="branch-card">
-        <img src="images/hoop.jpg" alt="분당점 수업 모습">
-        <div class="branch-body">
-          <span class="branch-tag">BRANCH</span>
-          <h3>분당점</h3>
-          <div class="branch-info"><b>주소</b><span>경기 성남시 분당구 000로 00</span></div>
-          <div class="branch-info"><b>전화</b><span>031-000-0000</span></div>
-          <div class="branch-info"><b>운영</b><span>평일 10:00–20:00 / 토 10:00–14:00</span></div>
-        </div>
+      <div class="feature-card">
+        <h3>광교점</h3>
+        <p>010-6701-0881</p>
       </div>
-      <div class="branch-card">
-        <img src="images/ball.jpg" alt="송도점 수업 모습">
-        <div class="branch-body">
-          <span class="branch-tag">BRANCH</span>
-          <h3>송도점</h3>
-          <div class="branch-info"><b>주소</b><span>인천 연수구 송도과학로 00</span></div>
-          <div class="branch-info"><b>전화</b><span>032-000-0000</span></div>
-          <div class="branch-info"><b>운영</b><span>평일 10:00–20:00 / 토 10:00–14:00</span></div>
-        </div>
+      <div class="feature-card">
+        <h3>신현점</h3>
+        <p>010-4471-8884</p>
       </div>
     </div>
-  </div>
-</section>
-
-<section id="gallery" class="gallery">
-  <div class="wrap">
-    <div class="eyebrow center">GALLERY</div>
-    <h2 class="section-title center">라리의 순간들</h2>
-    <div class="gallery-grid">
-      <div><img src="images/hero.jpg" alt="리본 연기"></div>
-      <div><img src="images/hoop.jpg" alt="후프 연기"></div>
-      <div><img src="images/ball.jpg" alt="볼 연기"></div>
-      <div><img src="images/studio.jpg" alt="스튜디오"></div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="cta">
-      <div>
-        <h2>지금 무료 체험 수업을 예약하세요</h2>
-        <p>가까운 지점에서 라리리듬체조의 커리큘럼을 직접 경험해보세요.</p>
-      </div>
-      <a href="#contact" class="btn-primary">체험 수업 신청하기</a>
-    </div>
-  </div>
-</section>
-
-<section id="contact">
-  <div class="wrap">
-    <div class="eyebrow center">CONTACT</div>
-    <h2 class="section-title center">상담 문의</h2>
-    <p class="section-desc center">궁금하신 점을 남겨주시면 담당자가 빠르게 연락드립니다.</p>
-    <div class="contact-grid">
-      <ul class="contact-list">
-        <li>
-          <div class="icon-dot">📍</div>
-          <div><b>지점 안내</b>강남점 · 분당점 · 송도점 — 상세 위치는 지점안내 섹션을 참고해주세요.</div>
-        </li>
-        <li>
-          <div class="icon-dot">☎️</div>
-          <div><b>대표 전화</b>1544-0000 (평일 10:00–19:00)</div>
-        </li>
-        <li>
-          <div class="icon-dot">✉️</div>
-          <div><b>이메일</b>hello@ralie-rg.com</div>
-        </li>
-        <li>
-          <div class="icon-dot">💬</div>
-          <div><b>카카오톡 채널</b>@라리리듬체조 채널 추가 후 문의</div>
-        </li>
-      </ul>
-      <form class="form">
-        <label>학부모 성함</label>
-        <input type="text" placeholder="이름을 입력해주세요">
-        <label>연락처</label>
-        <input type="text" placeholder="010-0000-0000">
-        <label>희망 지점</label>
-        <select>
-          <option>강남점</option>
-          <option>분당점</option>
-          <option>송도점</option>
-        </select>
-        <label>문의 내용</label>
-        <textarea placeholder="아이의 나이, 희망 시간대 등을 남겨주세요"></textarea>
-        <button type="submit">상담 신청하기</button>
-      </form>
+    <div class="btn-row center" style="justify-content:center;margin-top:40px;">
+      <a href="branch.html" class="btn-primary">지점 상세정보 보기</a>
     </div>
   </div>
 </section>
@@ -428,14 +203,12 @@
         <p style="margin-top:8px;font-size:13px;color:#9A8E80;">우아함을 배우는 시간, 라리리듬체조</p>
       </div>
       <div class="footer-sns">
-        <a href="#">IG</a>
-        <a href="#">YT</a>
-        <a href="#">TB</a>
+        <a href="https://www.instagram.com/rari_rg_korea/" target="_blank" rel="noopener">IG</a>
       </div>
     </div>
     <div class="footer-bottom">
       <span>© 2026 라리리듬체조. All rights reserved.</span>
-      <span>강남점 · 분당점 · 송도점</span>
+      <span>수지점 · 광교점 · 신현점 · 선수반</span>
     </div>
   </div>
 </footer>
