@@ -22,6 +22,7 @@
   header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,249,242,0.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);}
   header .wrap{display:flex;align-items:center;justify-content:space-between;height:76px;}
   .logo{font-size:22px;font-weight:700;letter-spacing:1px;color:var(--gold-deep);}
+  .logo-img{height:40px;display:block;}
   nav ul{display:flex;gap:26px;list-style:none;}
   nav a{font-size:14.5px;color:var(--ink);font-weight:500;white-space:nowrap;}
   nav a:hover, nav a.active{color:var(--pink);}
@@ -68,18 +69,17 @@
 
 <header>
   <div class="wrap">
-    <div class="logo">RARI 리듬체조</div>
+    <div class="logo"><img src="images/logo-gold.png" alt="RARI 리듬체조" class="logo-img"></div>
     <nav>
       <ul>
         <li><a href="about.html">학원소개</a></li>
+        <li><a href="director.html">대표원장</a></li>
         <li><a href="program.html" class="active">프로그램</a></li>
-        <li><a href="director.html">원장소개</a></li>
-        <li><a href="branch.html">지점안내</a></li>
         <li><a href="gallery.html">갤러리</a></li>
-        <li><a href="contact.html">문의</a></li>
+        <li><a href="branch.html">지점안내 및 문의</a></li>
       </ul>
     </nav>
-    <a href="contact.html" class="nav-cta">상담 신청</a>
+    <a href="branch.html#inquiry" class="nav-cta">상담 신청</a>
   </div>
 </header>
 
@@ -120,7 +120,7 @@
     </div>
 
     <div style="text-align:center;margin-top:48px;">
-      <a href="contact.html" class="btn-primary">상담 신청하기</a>
+      <a href="branch.html#inquiry" class="btn-primary">상담 신청하기</a>
     </div>
   </div>
 </section>
