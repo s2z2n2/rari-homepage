@@ -28,6 +28,7 @@
   nav a:hover, nav a.active{color:var(--pink);}
   .nav-cta{background:var(--pink);color:var(--white)!important;padding:10px 22px;border-radius:24px;font-size:14px;font-weight:700;}
   .nav-cta:hover{background:#E23F88;}
+  .nav-toggle{display:none;background:none;border:none;font-size:26px;line-height:1;cursor:pointer;color:var(--ink);padding:4px 6px;}
 
   .img-placeholder{background:linear-gradient(135deg,var(--pink-soft),var(--blush));border:1.5px dashed var(--pink);border-radius:16px;display:flex;align-items:center;justify-content:center;color:var(--gold-deep);font-size:14px;font-weight:700;text-align:center;}
 
@@ -53,7 +54,14 @@
   .footer-bottom{border-top:1px solid rgba(255,255,255,0.12);padding-top:20px;font-size:12.5px;color:#9A8E80;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;}
 
   @media(max-width:860px){
-    nav{display:none;}
+    nav{display:none;position:fixed;top:76px;left:0;right:0;background:var(--cream);border-bottom:1px solid var(--border);box-shadow:0 12px 24px rgba(59,50,44,0.08);max-height:calc(100vh - 76px);overflow-y:auto;}
+    nav.nav-open{display:block;}
+    nav ul{flex-direction:column;gap:0;padding:8px 24px 16px;}
+    nav li{width:100%;border-bottom:1px solid var(--border);}
+    nav li:last-child{border-bottom:none;}
+    nav a{display:block;padding:16px 4px;font-size:15.5px;}
+    .nav-toggle{display:block;}
+    header .nav-cta{display:none;}
     .gallery-grid{grid-template-columns:repeat(2,1fr);}
     .gallery-grid > div:nth-child(1){grid-column:span 2;grid-row:span 1;height:220px;}
     section{padding:64px 0;}
@@ -66,6 +74,7 @@
 <header>
   <div class="wrap">
     <a href="index.html" class="logo"><img src="images/logo-gold.png" alt="RARI 리듬체조" class="logo-img"></a>
+    <button class="nav-toggle" onclick="toggleMobileNav()" aria-label="메라설밥">☰</button>
     <nav>
       <ul>
         <li><a href="about.html">학원소개</a></li>
@@ -106,7 +115,7 @@
   <div class="wrap">
     <div class="footer-top">
       <div>
-        <div class="logo">RARI 리듬체조</div>
+        <div class="logo">라리 리듬체조</div>
         <p style="margin-top:8px;font-size:13px;color:#9A8E80;">리듬체조 전문학원, RARI</p>
       </div>
       <div class="footer-sns">
@@ -114,11 +123,17 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 RARI 리듬체조. All rights reserved.</span>
+      <span>© 2026 라리리듬체조. All rights reserved.</span>
       <span>수지점 · 광교점 · 신현점 · 선수반</span>
     </div>
   </div>
 </footer>
 
+<script>
+  function toggleMobileNav(){
+    var nav = document.querySelector('header nav');
+    if(nav) nav.classList.toggle('nav-open');
+  }
+</script>
 </body>
 </html>

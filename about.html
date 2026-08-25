@@ -28,6 +28,7 @@
   nav a:hover, nav a.active{color:var(--pink);}
   .nav-cta{background:var(--pink);color:var(--white)!important;padding:10px 22px;border-radius:24px;font-size:14px;font-weight:700;}
   .nav-cta:hover{background:#E23F88;}
+  .nav-toggle{display:none;background:none;border:none;font-size:26px;line-height:1;cursor:pointer;color:var(--ink);padding:4px 6px;}
 
   .img-placeholder{background:linear-gradient(135deg,var(--pink-soft),var(--blush));border:1.5px dashed var(--pink);border-radius:16px;display:flex;align-items:center;justify-content:center;color:var(--gold-deep);font-size:14px;font-weight:700;text-align:center;}
 
@@ -55,6 +56,7 @@
   .philosophy-card{max-width:900px;margin:0 auto;text-align:center;}
   .philosophy-mark{font-size:56px;color:var(--pink);font-weight:700;line-height:1;margin-bottom:8px;}
   .philosophy-card p{font-size:17px;color:var(--ink);line-height:2;margin-bottom:6px;word-break:keep-all;}
+  .ph-line{white-space:nowrap;}
   .philosophy-sign{margin-top:24px;font-size:14px;color:var(--gold-deep);font-weight:700;}
 
   footer{background:#2E2620;color:#D9CDBE;padding:48px 0 28px;}
@@ -65,11 +67,19 @@
   .footer-bottom{border-top:1px solid rgba(255,255,255,0.12);padding-top:20px;font-size:12.5px;color:#9A8E80;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;}
 
   @media(max-width:860px){
-    nav{display:none;}
+    nav{display:none;position:fixed;top:76px;left:0;right:0;background:var(--cream);border-bottom:1px solid var(--border);box-shadow:0 12px 24px rgba(59,50,44,0.08);max-height:calc(100vh - 76px);overflow-y:auto;}
+    nav.nav-open{display:block;}
+    nav ul{flex-direction:column;gap:0;padding:8px 24px 16px;}
+    nav li{width:100%;border-bottom:1px solid var(--border);}
+    nav li:last-child{border-bottom:none;}
+    nav a{display:block;padding:16px 4px;font-size:15.5px;}
+    .nav-toggle{display:block;}
+    header .nav-cta{display:none;}
     .about{grid-template-columns:1fr;}
     .story-grid{grid-template-columns:1fr;}
     section{padding:64px 0;}
     .page-hero{padding:140px 0 48px;}
+    .ph-line{white-space:normal;}
   }
 </style>
 </head>
@@ -78,6 +88,7 @@
 <header>
   <div class="wrap">
     <a href="index.html" class="logo"><img src="images/logo-gold.png" alt="RARI 리듬체조" class="logo-img"></a>
+    <button class="nav-toggle" onclick="toggleMobileNav()" aria-label="메라설밥">☰</button>
     <nav>
       <ul>
         <li><a href="about.html" class="active">학원소개</a></li>
@@ -115,7 +126,7 @@
     <h2 class="section-title center">교육 철학</h2>
     <div class="philosophy-mark">“</div>
     <p>좋은 선수로 성장하는 것도 중요하지만, 그보다 먼저 운동을 즐기고 행복해하는 아이로 자라길 바랍니다.<br>
-    <span style="white-space:nowrap;">때로는 실수도 하고, 넘어지기도 하고, 마음처럼 되지 않는 날도 있지만 그 모든 과정 속에서 아이들은 조금씩 성장해 갑니다.</span><br>
+    <span class="ph-line">때로는 실수도 하고, 넘어지기도 하고, 마음처럼 되지 않는 날도 있지만 그 모든 과정 속에서 아이들은 조금씩 성장해 갑니다.</span><br>
     아이들이 운동을 통해 자신감을 얻고, 스스로를 믿을 수 있는 힘을 키워가길 응원합니다.<br>
     오늘도 웃으며 운동하고, 즐겁게 성장하는 우리 아이들과 함께합니다.</p>
   </div>
@@ -130,7 +141,7 @@
         <div class="img-placeholder">이미지 준비중</div>
         <div class="body">
           <h3>기본기에 충실한 지도</h3>
-          <p>자세와 유연성 교정부터 차미나게 쌓아가는 체계적인 커리큘럼.</p>
+          <p>자세교정과 유연성부터 차곡차곡 쌓아가는 체계적인 커리큘럼.</p>
         </div>
       </div>
       <div class="story-card">
@@ -158,7 +169,7 @@
   <div class="wrap">
     <div class="footer-top">
       <div>
-        <div class="logo">RARI 리듬체조</div>
+        <div class="logo">라리 리듬체조</div>
         <p style="margin-top:8px;font-size:13px;color:#9A8E80;">리듬체조 전문학원, RARI</p>
       </div>
       <div class="footer-sns">
@@ -166,11 +177,17 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 RARI 리듬체조. All rights reserved.</span>
+      <span>© 2026 라리리듬체조. All rights reserved.</span>
       <span>수지점 · 광교점 · 신현점 · 선수반</span>
     </div>
   </div>
 </footer>
 
+<script>
+  function toggleMobileNav(){
+    var nav = document.querySelector('header nav');
+    if(nav) nav.classList.toggle('nav-open');
+  }
+</script>
 </body>
 </html>
