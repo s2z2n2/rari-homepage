@@ -32,7 +32,7 @@
 
   .img-placeholder{background:linear-gradient(135deg,var(--pink-soft),var(--blush));border:1.5px dashed var(--pink);border-radius:16px;display:flex;align-items:center;justify-content:center;color:var(--gold-deep);font-size:14px;font-weight:700;text-align:center;}
 
-  .hero{position:relative;padding:168px 0 80px;overflow:hidden;isolation:isolate;}
+  .hero{position:relative;padding:168px 0 80px;overflow:hidden;isolation:isolate;background:linear-gradient(180deg,var(--pink-soft),var(--cream));}
   .hero-video{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center 75%;z-index:0;}
   .hero-overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(180deg,var(--pink-soft),var(--cream));opacity:0.6;z-index:1;}
   .hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center;}
@@ -89,7 +89,7 @@
 
 <header>
   <div class="wrap">
-    <div class="logo"><img src="images/logo-gold.png" alt="RARI 리듬체조" class="logo-img"></div>
+    <a href="index.html" class="logo"><img src="images/logo-gold.png" alt="RARI 리듬체조" class="logo-img"></a>
     <nav>
       <ul>
         <li><a href="about.html">학원소개</a></li>
@@ -116,19 +116,7 @@
     </div>
     <div class="hero-media" style="height:1px;"></div>
   </div>
-  <video class="hero-video" src="videos/hero.mp4" autoplay muted loop playsinline></video>
-  <div class="hero-overlay"></div>
-  <button class="hero-sound-toggle" onclick="toggleHeroSound(this)">🔇 소리 켜기</button>
 </section>
-
-<script>
-  function toggleHeroSound(btn){
-    var v = document.querySelector('.hero-video');
-    if(!v) return;
-    v.muted = !v.muted;
-    btn.textContent = v.muted ? '🔇 소리 켜기' : '🔊 소리 끄기';
-  }
-</script>
 
 <section class="director-teaser">
   <div class="wrap director-grid">
@@ -149,7 +137,7 @@
     <div>
       <img src="images/logo-gold.png" alt="RARI" class="about-logo">
       <div class="eyebrow">ABOUT RARI</div>
-      <h2 class="section-title">아이의 몸짓 하나하나에<br>우아함을 더합니다</h2>
+      <h2 class="section-title">웃으며 운동하고<br>자신감 있게 성장합니다</h2>
       <p class="section-desc">RARI는 국가대표 및 국가대표 상비군 출신 전문 강사진이 6세 유치부부터 전문 선수 교육까지 지도하는 리듬체조 전문학원입니다. 자세 교정과 예술 표현력을 함께 기르는 커리큘럼으로 자신감과 우아한 신체 언어를 완성합니다. 유치부 아이부터 대회반 · 선수반까지, 각 아이의 수준과 목표에 맞춘 맞춤 지도를 제공합니다.</p>
       <div class="btn-row">
         <a href="about.html" class="btn-primary">학원소개 자세히 보기</a>
