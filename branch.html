@@ -55,14 +55,6 @@
   .btn-mini{display:block;text-align:center;padding:10px 12px;border-radius:10px;font-size:13.5px;font-weight:700;background:var(--cream-soft);color:var(--gold-deep);border:1px solid var(--border);}
   .btn-mini:hover{background:var(--blush);}
 
-  .inquiry-section{background:var(--cream-soft);}
-  .form-card{max-width:640px;margin:0 auto;background:var(--white);border:1px solid var(--border);border-radius:18px;padding:36px;}
-  .form-group{margin-bottom:20px;}
-  .form-group label{display:block;font-size:13.5px;font-weight:700;margin-bottom:8px;}
-  .form-group input, .form-group select, .form-group textarea{width:100%;padding:12px 14px;border:1px solid var(--border);border-radius:10px;font-size:14px;font-family:inherit;background:var(--cream-soft);}
-  .form-group textarea{resize:vertical;min-height:90px;}
-  .btn-submit{width:100%;background:var(--pink);color:var(--white);padding:15px;border:none;border-radius:12px;font-size:15px;font-weight:700;cursor:pointer;}
-  .btn-submit:hover{background:#E23F88;}
 
   footer{background:#2E2620;color:#D9CDBE;padding:48px 0 28px;}
   .footer-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:24px;margin-bottom:32px;}
@@ -84,7 +76,6 @@
     .branch-grid{grid-template-columns:1fr;}
     section{padding:64px 0;}
     .page-hero{padding:140px 0 48px;}
-    .form-card{padding:24px;}
   }
 </style>
 </head>
@@ -103,7 +94,7 @@
         <li><a href="branch.html" class="active">지점안내 및 문의</a></li>
       </ul>
     </nav>
-    <a href="branch.html#inquiry" class="nav-cta">상담 신청</a>
+    <a href="branch.html" class="nav-cta">상담 신청</a>
   </div>
 </header>
 
@@ -118,17 +109,6 @@
 <section>
   <div class="wrap">
     <div class="branch-grid">
-
-      <div class="branch-card">
-        <div class="img-placeholder">이미지 준비중</div>
-        <div class="branch-body">
-          <span class="branch-tag">선수반</span>
-          <h3>선수반</h3>
-          <div class="branch-info"><b>주소</b><span>경기 광주시 오포로 60-3 (오산리 60-3)</span></div>
-          <div class="copy-row"><span class="phone-num">📞 010-2564-8881</span><button class="btn-copy" data-phone="010-2564-8881" onclick="copyPhone(this)">번호 복사</button></div>
-          <a class="btn-mini" href="https://www.instagram.com/rari_rg_korea/" target="_blank" rel="noopener">📷 인스타그램 바로가기</a>
-        </div>
-      </div>
 
       <div class="branch-card">
         <div class="img-placeholder">이미지 준비중</div>
@@ -163,41 +143,21 @@
         </div>
       </div>
 
+      <div class="branch-card">
+        <div class="img-placeholder">이미지 준비중</div>
+        <div class="branch-body">
+          <span class="branch-tag">선수반</span>
+          <h3>선수반</h3>
+          <div class="branch-info"><b>주소</b><span>경기 광주시 오포로 60-3 (오산리 60-3)</span></div>
+          <div class="copy-row"><span class="phone-num">📞 010-2564-8881</span><button class="btn-copy" data-phone="010-2564-8881" onclick="copyPhone(this)">번호 복사</button></div>
+          <a class="btn-mini" href="https://www.instagram.com/rari_rg_korea/" target="_blank" rel="noopener">📷 인스타그램 바로가기</a>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
 
-<section id="inquiry" class="inquiry-section">
-  <div class="wrap">
-    <div class="eyebrow center">CONTACT</div>
-    <h2 class="section-title center">상담 신청</h2>
-    <p class="section-desc center" style="margin:0 auto 40px;">위 지점 안내를 통해 전화로 바로 문의하실 수 있거나, 아래 양식을 남겨주시면 확인 후 연락드립니다.</p>
-    <div class="form-card">
-      <div class="form-group">
-        <label>학부모 성함</label>
-        <input type="text" placeholder="이름을 입력해주세요">
-      </div>
-      <div class="form-group">
-        <label>연락처</label>
-        <input type="text" placeholder="010-0000-0000">
-      </div>
-      <div class="form-group">
-        <label>희망 지점</label>
-        <select>
-          <option>수지점</option>
-          <option>광교점</option>
-          <option>신현점</option>
-          <option>선수반</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label>문의 내용</label>
-        <textarea placeholder="아이의 나이, 희망 시간대 등을 남겨주세요"></textarea>
-      </div>
-      <button class="btn-submit">상담 신청하기</button>
-    </div>
-  </div>
-</section>
 
 <footer>
   <div class="wrap">
