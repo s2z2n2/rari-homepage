@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>학원소개 | RARI 리듬체조</title>
+<title>원장소개 | RARI 리듬체조</title>
 <style>
   :root{
     --cream:#FFF9F2; --cream-soft:#FBF1E6;
@@ -35,20 +35,21 @@
   .section-desc{font-size:15.5px;color:var(--ink-soft);max-width:560px;}
   .center{text-align:center;margin-left:auto;margin-right:auto;}
 
-  .about{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
-  .about-media{height:380px;}
-
   .page-hero{padding:168px 0 64px;background:linear-gradient(180deg,var(--pink-soft),var(--cream));text-align:center;}
 
-  .story-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:56px;}
-  .story-card{background:var(--white);border:1px solid var(--border);border-radius:16px;overflow:hidden;}
-  .story-card .img-placeholder{height:200px;border-radius:0;}
-  .story-card div.body{padding:22px;}
-  .story-card h3{font-size:17px;margin-bottom:8px;}
-  .story-card p{font-size:14px;color:var(--ink-soft);}
+  .profile-grid{display:grid;grid-template-columns:260px 1fr;gap:48px;align-items:center;margin-bottom:24px;}
+  .profile-photo{height:260px;border-radius:50%;}
+  .profile-grid h2{font-size:26px;margin-bottom:6px;}
+  .profile-grid .role{color:var(--pink);font-weight:700;font-size:14px;margin-bottom:16px;}
+  .profile-grid p{font-size:14.5px;color:var(--ink-soft);}
 
-  .btn-primary{background:var(--pink);color:var(--white);padding:15px 30px;border-radius:28px;font-weight:700;font-size:15px;display:inline-block;}
-  .btn-primary:hover{background:#E23F88;}
+  .cred-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:24px;}
+  .cred-card{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:28px;}
+  .cred-card h3{font-size:16px;margin-bottom:14px;color:var(--gold-deep);display:flex;align-items:center;gap:8px;}
+  .cred-card ul{list-style:none;display:flex;flex-direction:column;gap:10px;}
+  .cred-card li{font-size:14px;color:var(--ink-soft);padding-left:16px;position:relative;}
+  .cred-card li::before{content:'';position:absolute;left:0;top:8px;width:6px;height:6px;border-radius:50%;background:var(--pink);}
+  .cred-card li b{color:var(--ink);font-weight:600;}
 
   footer{background:#2E2620;color:#D9CDBE;padding:48px 0 28px;}
   .footer-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:24px;margin-bottom:32px;}
@@ -59,8 +60,8 @@
 
   @media(max-width:860px){
     nav{display:none;}
-    .about{grid-template-columns:1fr;}
-    .story-grid{grid-template-columns:1fr;}
+    .profile-grid, .cred-grid{grid-template-columns:1fr;}
+    .profile-photo{margin:0 auto;}
     section{padding:64px 0;}
     .page-hero{padding:140px 0 48px;}
   }
@@ -73,9 +74,9 @@
     <div class="logo">RARI 리듬체조</div>
     <nav>
       <ul>
-        <li><a href="about.html" class="active">학원소개</a></li>
+        <li><a href="about.html">학원소개</a></li>
         <li><a href="program.html">프로그램</a></li>
-        <li><a href="director.html">원장소개</a></li>
+        <li><a href="director.html" class="active">원장소개</a></li>
         <li><a href="branch.html">지점안내</a></li>
         <li><a href="gallery.html">갤러리</a></li>
         <li><a href="contact.html">문의</a></li>
@@ -87,51 +88,62 @@
 
 <section class="page-hero">
   <div class="wrap">
-    <div class="eyebrow center">ABOUT RARI</div>
-    <h1 class="section-title center">아이의 몸짓 하나하나에 우아함을 더합니다</h1>
-    <p class="section-desc center">리듬체조 전문학원 RARI의 철학과 이야기를 소개합니다.</p>
+    <div class="eyebrow center">DIRECTOR</div>
+    <h1 class="section-title center">원장 소개</h1>
+    <p class="section-desc center">RARI 리듬체조를 이끄는 김라원 원장을 소개합니다.</p>
   </div>
 </section>
 
 <section>
-  <div class="wrap about">
-    <div class="img-placeholder about-media">이미지 준비중</div>
-    <div>
-      <h2 class="section-title">국가대표 출신 전문 강사진이<br>함께합니다</h2>
-      <p class="section-desc">RARI는 국가대표 및 국가대표 상비군 출신 전문 강사진이 6세 유치부부터 전문 선수 교육까지 지도하는 리듬체조 전문학원입니다. 자세 교정과 예술 표현력을 함께 기르는 커리큘럼으로 자신감과 우아한 신체 언어를 완성합니다. 유치부 아이부터 대회반을 거쳐 선수반까지, 각 아이의 수준과 목표에 맞춘 1:1 맞춤 지도를 제공합니다.</p>
-    </div>
-  </div>
-</section>
-
-<section style="background:var(--cream-soft);">
   <div class="wrap">
-    <div class="eyebrow center">OUR VALUE</div>
-    <h2 class="section-title center">RARI가 소중히 생각하는 가치</h2>
-    <div class="story-grid">
-      <div class="story-card">
-        <div class="img-placeholder">이미지 준비중</div>
-        <div class="body">
-          <h3>기본기에 충실한 지도</h3>
-          <p>자세와 유연성 교정부터 차미나게 쌓아가는 체계적인 커리큘럼.</p>
-        </div>
-      </div>
-      <div class="story-card">
-        <div class="img-placeholder">이미지 준비중</div>
-        <div class="body">
-          <h3>예술 표현력</h3>
-          <p>음악과 함께하는 동작으로 자신감과 표현력을 키웁니다.</p>
-        </div>
-      </div>
-      <div class="story-card">
-        <div class="img-placeholder">이미지 준비중</div>
-        <div class="body">
-          <h3>검증된 지도력</h3>
-          <p>전국 대회 및 콩쿠르 입상으로 증명된 전문 지도진.</p>
-        </div>
+    <div class="profile-grid">
+      <div class="img-placeholder profile-photo">원장님 사진<br>준비중</div>
+      <div>
+        <h2>김라원</h2>
+        <div class="role">RARI 리듬체조 대표원장</div>
+        <p>국가대표 및 국가대표 후보선수부터 청소년 국가대표, 꿈나무 국가대표까지 다양한 대표팀을 지도해온 전문 지도자입니다. FIG 국제체조연맹 심판위원으로도 활동하며, 현장과 행정 양쪽에서 축적한 경험을 바탕으로 아이들에게 가장 안전하고 체계적인 지도를 제공합니다.</p>
       </div>
     </div>
-    <div style="text-align:center;margin-top:40px;">
-      <a href="contact.html" class="btn-primary">상담 신청하기</a>
+
+    <div class="cred-grid">
+      <div class="cred-card">
+        <h3>📌 주요 학력</h3>
+        <ul>
+          <li><b>이화여자대학교 교육대학원 석사 졸업</b> (체육교육 전공)</li>
+          <li>세종대학교 체육학과 졸업</li>
+        </ul>
+      </div>
+      <div class="cred-card">
+        <h3>📌 주요 자격 사항</h3>
+        <ul>
+          <li><b>FIG 국제 리듬체조 2급 지도자 자격</b></li>
+          <li>문화체육관광부 <b>전문스포츠지도사 1급(체조)</b></li>
+          <li>2013 아시아 국제체조연맹 지도자과정 수료</li>
+        </ul>
+      </div>
+      <div class="cred-card">
+        <h3>📌 국가대표 지도 경력</h3>
+        <ul>
+          <li>리듬체조 <b>주니어 국가대표</b> 단체 코치 (2017, 2024)</li>
+          <li>리듬체조 <b>국가대표 후보선수</b> 전문 지도자 (2017, 2024)</li>
+          <li>리듬체조 <b>청소년 국가대표</b> 전문 지도자 (2014, 2016, 2024)</li>
+          <li>리듬체조 <b>꿈나무 국가대표</b> 전문 지도자 (2020~2022)</li>
+        </ul>
+      </div>
+      <div class="cred-card">
+        <h3>📌 심판 및 협회 행정 경력</h3>
+        <ul>
+          <li><b>FIG 국제체조연맹 심판위원</b></li>
+          <li><b>대한체조협회 국내심판</b></li>
+          <li><b>대전시 체조협회 리듬체조 부회장</b></li>
+          <li><b>경기도 체조협회 이사</b></li>
+          <li><b>대한체조협회 경기력 향상위원</b></li>
+          <li>한국 체육교육학회 이사</li>
+          <li>2010~2023: 경기도 체조협회 리듬체조 부위원장/위원</li>
+          <li>2014~2022: 대한체조협회 경기위원/중고연맹위원/연구위원 역임</li>
+          <li>2020: 대한체조협회 K-짐스타 리듬체조 개발·연구위원</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
