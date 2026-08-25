@@ -48,6 +48,19 @@
   .level-pill b{display:block;color:var(--pink);font-size:16px;margin-bottom:6px;}
   .level-pill span{font-size:13px;color:var(--ink-soft);}
 
+  .lang-card{margin-top:64px;background:linear-gradient(135deg,var(--pink-soft),var(--white));border:1px solid var(--blush);border-radius:20px;padding:40px;box-shadow:0 16px 40px rgba(255,79,154,0.10);}
+  .lang-badge{display:inline-block;background:var(--pink);color:var(--white);font-size:12px;font-weight:700;letter-spacing:1px;padding:5px 14px;border-radius:20px;margin-bottom:16px;}
+  .lang-card h3{font-size:24px;margin-bottom:12px;}
+  .lang-card p{font-size:15px;color:var(--ink-soft);max-width:640px;}
+  .lang-row{display:flex;gap:16px;margin-top:28px;flex-wrap:wrap;}
+  .lang-item{flex:1;min-width:200px;background:var(--white);border:1px solid var(--border);border-radius:14px;padding:22px;}
+  .lang-item .flag{font-size:24px;margin-bottom:10px;}
+  .lang-item b{display:block;font-size:16px;margin-bottom:6px;}
+  .lang-item span{font-size:13px;color:var(--ink-soft);}
+  .lang-status{display:inline-block;font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:12px;margin-top:10px;}
+  .lang-status.open{background:var(--blush);color:var(--pink);}
+  .lang-status.soon{background:var(--cream-soft);color:var(--gold-deep);}
+
   .btn-primary{background:var(--pink);color:var(--white);padding:15px 30px;border-radius:28px;font-weight:700;font-size:15px;display:inline-block;}
   .btn-primary:hover{background:#E23F88;}
 
@@ -69,6 +82,8 @@
     header .nav-cta{display:none;}
     .section-title{font-size:24px;}
     .feature-grid{grid-template-columns:1fr;}
+    .lang-card{padding:26px;}
+    .lang-card h3{font-size:20px;}
     section{padding:64px 0;}
     .page-hero{padding:140px 0 48px;}
   }
@@ -127,6 +142,32 @@
       <div class="level-pill"><b>레벨2</b><span>기구 다루기와 표현력을 키우는 단계</span></div>
       <div class="level-pill"><b>대회반</b><span>지역 및 전국 대회 출전을 준비하는 클래스</span></div>
       <div class="level-pill"><b>선수반</b><span>전문 선수 진로를 위한 집중 훈련</span></div>
+    </div>
+
+    <div class="lang-card">
+      <span class="lang-badge">NEW · 외국어 클래스</span>
+      <h3>언어와 함께 배우는 리듬체조</h3>
+      <p>운동과 어학을 동시에! 캐나다 출신 원어민 강사님과 함께하는 영어 수업을 새롭게 신설했습니다. 아이가 자연스럽게 언어를 접하며 리듬체조를 배울 수 있는 클래스를 운영합니다.</p>
+      <div class="lang-row">
+        <div class="lang-item">
+          <div class="flag">🇨🇦</div>
+          <b>영어 수업</b>
+          <span>캐나다 출신 원어민 강사님이 직접 지도합니다.</span>
+          <div class="lang-status open">운영 중</div>
+        </div>
+        <div class="lang-item">
+          <div class="flag">🇯🇵</div>
+          <b>일본어 수업</b>
+          <span>개설을 준비하고 있습니다.</span>
+          <div class="lang-status soon">준비 중</div>
+        </div>
+        <div class="lang-item">
+          <div class="flag">🇷🇺</div>
+          <b>러시아어 수업</b>
+          <span>개설을 준비하고 있습니다.</span>
+          <div class="lang-status soon">준비 중</div>
+        </div>
+      </div>
     </div>
 
     <div style="text-align:center;margin-top:48px;">
