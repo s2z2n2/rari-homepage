@@ -35,7 +35,7 @@
 
   .hero{position:relative;padding:168px 0 80px;overflow:hidden;isolation:isolate;background:linear-gradient(180deg,var(--pink-soft),var(--cream));}
   .hero-video{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center 75%;z-index:0;}
-  .hero-overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(180deg,var(--pink-soft),var(--cream));opacity:0.6;z-index:1;}
+  .hero-overlay{position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(180deg,var(--pink-soft),var(--cream));opacity:0.32;z-index:1;}
   .hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center;}
   .hero-sound-toggle{position:absolute;bottom:20px;right:20px;z-index:3;background:rgba(59,50,44,0.55);color:#fff;border:1px solid rgba(255,255,255,0.4);border-radius:20px;padding:8px 16px;font-size:13px;font-weight:700;cursor:pointer;backdrop-filter:blur(4px);}
   .hero-eyebrow{display:inline-block;font-size:13px;letter-spacing:2px;font-weight:700;color:var(--pink);margin-bottom:20px;text-transform:uppercase;}
@@ -85,7 +85,8 @@
     nav a{display:block;padding:16px 4px;font-size:15.5px;}
     .nav-toggle{display:block;}
     header .nav-cta{display:none;}
-    .hero h1{font-size:32px;}
+    .hero h1{font-size:28px;}
+    .section-title{font-size:24px;}
     .hero-grid, .about, .director-grid{grid-template-columns:1fr;}
     .director-photo{margin:0 auto;}
     section{padding:64px 0;}
@@ -113,10 +114,14 @@
 </header>
 
 <section class="hero">
+  <video class="hero-video" autoplay muted loop playsinline poster="images/hero.jpg">
+    <source src="videos/hero.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay"></div>
   <div class="wrap hero-grid">
     <div class="hero-content">
       <span class="hero-eyebrow">RARI RHYTHMIC GYMNASTICS · 리듬체조 전문학원</span>
-      <h1>우아함은,<br>배울 수 있습니다.</h1>
+      <h1>리듬체조 전문학원, RARI</h1>
       <p>국가대표 및 국가대표 상비군 출신 전문 강사진이 이끄는 리듬체조 전문학원, RARI입니다. 유치부부터 선수반까지 아이의 눈높이에 맞춘 체계적인 수업을 진행합니다.</p>
       <div class="btn-row">
         <a href="branch.html#inquiry" class="btn-primary">상담 신청</a>
@@ -185,7 +190,7 @@
     </div>
     <div class="footer-bottom">
       <span>© 2026 라리리듬체조. All rights reserved.</span>
-      <span>수지점 · 광교점 · 신현점 · 선수반</span>
+      <span>수지점 · 광교�� · 신현점 · 선수반</span>
     </div>
   </div>
 </footer>
