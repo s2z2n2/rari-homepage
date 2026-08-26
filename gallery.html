@@ -40,7 +40,9 @@
   .page-hero{padding:168px 0 64px;background:linear-gradient(180deg,var(--pink-soft),var(--cream));text-align:center;}
 
   .gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:20px;margin-top:56px;}
-  .gallery-grid > div{height:100%;width:100%;}
+  .gallery-grid > div{height:100%;width:100%;overflow:hidden;border-radius:14px;}
+  .gallery-grid img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease;}
+  .gallery-grid > div:hover img{transform:scale(1.05);}
   .gallery-grid > div:nth-child(1){grid-column:span 2;grid-row:span 2;}
 
   .btn-primary{background:var(--pink);color:var(--white);padding:15px 30px;border-radius:28px;font-weight:700;font-size:15px;display:inline-block;}
@@ -101,11 +103,14 @@
 <section>
   <div class="wrap">
     <div class="gallery-grid">
-      <div class="img-placeholder">이미지 준비중</div>
-      <div class="img-placeholder">이미지 준비중</div>
-      <div class="img-placeholder">이미지 준비중</div>
-      <div class="img-placeholder">이미지 준비중</div>
-      <div class="img-placeholder">이미지 준비중</div>
+      <div><img src="images/gallery1.jpg" alt="리듬체조 수업 장면" loading="lazy"></div>
+      <div><img src="images/gallery2.jpg" alt="볼 연기 장면" loading="lazy"></div>
+      <div><img src="images/gallery3.jpg" alt="라리리듬체조 작품 발표회" loading="lazy"></div>
+      <div><img src="images/gallery4.jpg" alt="유연성 훈련 수업" loading="lazy"></div>
+      <div><img src="images/gallery5.jpg" alt="스튜디오 연습 장면" loading="lazy"></div>
+      <div><img src="images/gallery6.jpg" alt="발표회 단체 사진" loading="lazy"></div>
+      <div><img src="images/gallery7.jpg" alt="선수반 대기 실 한컷" loading="lazy"></div>
+      <div><img src="images/gallery8.jpg" alt="대표원장과 선수들" loading="lazy"></div>
     </div>
     <div style="text-align:center;margin-top:48px;">
       <a href="branch.html" class="btn-primary">상담 신청하기</a>
