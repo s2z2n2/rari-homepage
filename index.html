@@ -70,11 +70,19 @@
   .level-pill b{display:block;color:var(--pink);font-size:15.5px;margin-bottom:6px;}
   .level-pill span{font-size:13px;color:var(--ink-soft);}
 
+  .blog-cta{background:linear-gradient(135deg,var(--pink),#FF86BE);border-radius:24px;padding:56px 40px;text-align:center;box-shadow:0 20px 48px rgba(255,79,154,0.22);}
+  .blog-cta .eyebrow{color:rgba(255,255,255,0.9);}
+  .blog-cta h2{font-size:30px;font-weight:700;color:#FFFFFF;margin-bottom:14px;}
+  .blog-cta p{font-size:15.5px;color:rgba(255,255,255,0.94);max-width:540px;margin:0 auto 30px;}
+  .btn-white{background:#FFFFFF;color:var(--pink);padding:15px 32px;border-radius:28px;font-weight:700;font-size:15px;display:inline-block;}
+  .btn-white:hover{background:var(--cream);}
+
   footer{background:#2E2620;color:#D9CDBE;padding:48px 0 28px;}
   .footer-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:24px;margin-bottom:32px;}
   .footer-top .logo{color:var(--white);}
-  .footer-sns{display:flex;gap:14px;}
-  .footer-sns a{padding:8px 16px;border-radius:20px;border:1px solid rgba(255,255,255,0.2);font-size:13px;}
+  .footer-sns{display:flex;gap:14px;align-items:center;flex-wrap:wrap;}
+  .footer-sns a{display:inline-flex;align-items:center;justify-content:center;padding:10px 18px;border-radius:20px;border:1px solid rgba(255,255,255,0.2);font-size:13px;line-height:1;text-align:center;white-space:nowrap;}
+  .footer-sns a.blog{background:var(--pink);border-color:var(--pink);color:var(--white);font-weight:700;}
   .footer-bottom{border-top:1px solid rgba(255,255,255,0.12);padding-top:20px;font-size:12.5px;color:#9A8E80;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;}
 
   @media(max-width:860px){
@@ -88,6 +96,8 @@
     header .nav-cta{display:none;}
     .hero h1{font-size:28px;}
     .section-title{font-size:24px;}
+    .blog-cta{padding:36px 24px;}
+    .blog-cta h2{font-size:21px;}
     .hero-grid, .about, .director-grid{grid-template-columns:1fr;}
     .director-photo{margin:0 auto;}
     section{padding:64px 0;}
@@ -179,6 +189,17 @@
   </div>
 </section>
 
+<section class="blog-section">
+  <div class="wrap">
+    <div class="blog-cta">
+      <div class="eyebrow center">RARI BLOG</div>
+      <h2>생생한 수업 이야기, 블로그에서 만나요</h2>
+      <p>수업 현장과 대회 소식, 아이들의 성장 이야기를 블로그에 기록하고 있습니다.</p>
+      <a href="https://m.blog.naver.com/rari8881" target="_blank" rel="noopener" class="btn-white">네이버 블로그 방문하기</a>
+    </div>
+  </div>
+</section>
+
 <footer>
   <div class="wrap">
     <div class="footer-top">
@@ -188,6 +209,7 @@
       </div>
       <div class="footer-sns">
         <a href="https://www.instagram.com/rari_rg_korea/" target="_blank" rel="noopener">인스타그램</a>
+        <a href="https://m.blog.naver.com/rari8881" target="_blank" rel="noopener" class="blog">네이버 블로그</a>
       </div>
     </div>
     <div class="footer-bottom">
