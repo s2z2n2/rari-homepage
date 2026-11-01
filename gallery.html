@@ -63,6 +63,17 @@
   .gallery-grid > div:hover img{transform:scale(1.05);}
   .gallery-grid > div:nth-child(1){grid-column:span 2;grid-row:span 2;}
 
+  .gallery-grid video{width:100%;height:100%;object-fit:cover;display:block;}
+  .gallery-grid > div{cursor:zoom-in;}
+  .gallery-grid > div.hidden{display:none;}
+  .more-wrap{text-align:center;margin-top:40px;}
+  .more-btn{background:var(--pink);color:#fff;border:none;border-radius:30px;padding:14px 40px;font-size:15px;font-weight:700;cursor:pointer;box-shadow:0 8px 20px rgba(255,79,154,0.2);}
+  .lightbox{position:fixed;inset:0;background:rgba(20,14,10,0.9);display:none;align-items:center;justify-content:center;z-index:9999;}
+  .lightbox.open{display:flex;}
+  .lightbox img{max-width:92vw;max-height:88vh;border-radius:8px;}
+  .lightbox button{position:absolute;background:none;border:none;color:#fff;font-size:40px;cursor:pointer;padding:10px 18px;}
+  .lb-close{top:14px;right:14px;} .lb-prev{left:6px;top:50%;transform:translateY(-50%);} .lb-next{right:6px;top:50%;transform:translateY(-50%);}
+
 
   footer{background:#2E2620;color:#D9CDBE;padding:48px 0 28px;}
   .footer-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:24px;margin-bottom:32px;}
@@ -94,7 +105,7 @@
 <header>
   <div class="wrap">
     <a href="index.html" class="logo"><img src="images/logo-gold.png" alt="RARI 리듬체조" class="logo-img"></a>
-    <button class="nav-toggle" onclick="toggleMobileNav()" aria-label="메라설밥">☰</button>
+    <button class="nav-toggle" onclick="toggleMobileNav()" aria-label="메뉴 열기">☰</button>
     <nav>
       <ul>
         <li><a href="about.html">학원소개</a></li>
@@ -127,7 +138,102 @@
       <div><img src="images/gallery6.jpg" alt="발표회 단체 사진" loading="lazy"></div>
       <div><img src="images/gallery7.jpg" alt="선수반 대기 실 한컷" loading="lazy"></div>
       <div><img src="images/gallery8.jpg" alt="대표원장과 선수들" loading="lazy"></div>
+      <div class="g-item"><img src="images/gallery/p01.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p02.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p03.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p04.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p05.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p06.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p07.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p08.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p09.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p10.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p11.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p12.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p13.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p14.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p15.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p16.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p17.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p18.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p19.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p20.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p21.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p22.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p23.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p24.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p25.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p26.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p27.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p28.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p29.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p30.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p31.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p32.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p33.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p34.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p35.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p36.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p37.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p38.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p39.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p40.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p41.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p42.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p43.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p44.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p45.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p46.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p47.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p48.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p49.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p50.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p51.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p52.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p53.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p54.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p55.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p56.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p57.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p58.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p59.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><video src="videos/gallery_stage.mp4" poster="images/gallery/p60_poster.jpg" autoplay muted loop playsinline preload="none"></video></div>
+      <div class="g-item"><img src="images/gallery/p61.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p62.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p63.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p64.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p65.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p66.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p67.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p68.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p69.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p70.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p71.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p72.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p73.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p74.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p75.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p76.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p77.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p78.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p79.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p80.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p81.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p82.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p84.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p85.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p86.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p87.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p88.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p89.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p90.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p91.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p92.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p93.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p94.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
+      <div class="g-item"><img src="images/gallery/p95.jpg" alt="라리리듬체조 갤러리 사진" loading="lazy" decoding="async"></div>
     </div>
+    <div class="more-wrap"><button id="moreBtn" class="more-btn" onclick="showMore()">사진 더보기</button></div>
   </div>
 </section>
 
@@ -155,6 +261,23 @@
     var nav = document.querySelector('header nav');
     if(nav) nav.classList.toggle('nav-open');
   }
+  var PAGE=24, shown=PAGE;
+  var cells=[].slice.call(document.querySelectorAll('.gallery-grid > div'));
+  function render(){cells.forEach(function(c,i){c.classList.toggle('hidden',i>=shown);});
+    var b=document.getElementById('moreBtn'); if(b) b.style.display=shown>=cells.length?'none':'inline-block';}
+  function showMore(){shown+=PAGE;render();}
+  render();
+  var imgs=[].slice.call(document.querySelectorAll('.gallery-grid img')), cur=0;
+  var lb=document.createElement('div');lb.className='lightbox';
+  lb.innerHTML='<button class="lb-close" aria-label="닫기">×</button><button class="lb-prev" aria-label="이전">‹</button><img alt=""><button class="lb-next" aria-label="다음">›</button>';
+  document.body.appendChild(lb);var lbImg=lb.querySelector('img');
+  function openLb(i){cur=(i+imgs.length)%imgs.length;lbImg.src=imgs[cur].src;lb.classList.add('open');}
+  imgs.forEach(function(im,i){im.parentNode.addEventListener('click',function(){openLb(i);});});
+  lb.querySelector('.lb-close').onclick=function(){lb.classList.remove('open');};
+  lb.querySelector('.lb-prev').onclick=function(e){e.stopPropagation();openLb(cur-1);};
+  lb.querySelector('.lb-next').onclick=function(e){e.stopPropagation();openLb(cur+1);};
+  lb.addEventListener('click',function(e){if(e.target===lb)lb.classList.remove('open');});
+  document.addEventListener('keydown',function(e){if(!lb.classList.contains('open'))return;if(e.key==='Escape')lb.classList.remove('open');if(e.key==='ArrowLeft')openLb(cur-1);if(e.key==='ArrowRight')openLb(cur+1);});
 </script>
 </body>
 </html>
